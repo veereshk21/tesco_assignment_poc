@@ -1,7 +1,12 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
       {
         test: /\.js$/,
         loader: "babel-loader",
@@ -22,14 +27,20 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(gif|png|jpe?g|svg)$/,
+        exclude: /node_modules/,
         use: [
-            {
-              loader: "css-loader",
-              options: { importLoaders: 1 }
-            }
-          ]
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+            },
+          },
+        ],
       },
+     
     ]
-  }
+  },
+  plugins: [new MiniCssExtractPlugin()]
 };

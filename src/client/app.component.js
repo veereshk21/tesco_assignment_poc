@@ -7,10 +7,11 @@ const App = ({ route }) => {
   return (
     <div className="container">
       <Header />
+      <div className="content">    
       <div className="main-content"> 
         {renderRoutes(route.routes)}
-      </div>
-     
+     </div>
+     </div>
     </div>
   );
 };

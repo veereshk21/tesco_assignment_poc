@@ -1,4 +1,48 @@
-.main-content {
+.header {
     font-family: "Verdana, Geneva, sans-serif";
+    background:#FF6600;
+}
+.header a {
+    padding-left: 5px;
+    color: #000000;
+}
+.container{
+    font-family: "Verdana, Geneva, sans-serif";
+    
+}
+
+.content {
+    padding:5px;
     background:#F6F6EF;
+}
+body {
+    font-family: "Verdana, Geneva, sans-serif";
+}
+.title {
+    font-family: "Verdana, Geneva, sans-serif";
+    font-size: 10pt;
+    color: #000;
+}
+.comhead {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 8pt;
+    color: #828282;
+}
+.subtext {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 7pt;
+    color: #828282;
+}
+.serialNumber {
+    width: 20px;
+    color: #828282;
+}
+.row {
+    padding-top:5px;
+}
+.votearrow {
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    margin: 3px 2px 6px;
 }

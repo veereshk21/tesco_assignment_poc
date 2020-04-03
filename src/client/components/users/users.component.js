@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { fetchUsers } from "../../actions/index";
 
@@ -9,24 +9,21 @@ class Users extends React.Component {
   render() {
     const { users = [] } = this.props;
     return (
-      <div>
-        <h4>Users</h4>
-        <ul>
-          {users.map(item =>
-          <div key={item.objectID} className="table-row">
-            <span >
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span >
-              {item.author}
-            </span>
-           <span>
-              {item.points}
-            </span>
+      <Fragment>
+        {users.map((item,i) =>
+        item.title &&<div className="row"> 
+          <div className="col-auto serialNumber">
+            {i+1}
           </div>
+          <div className="col-auto">
+              <a className="title" href={item.url}>{item.title} <span className="comhead">({item.author})</span> </a>
+              <div className="subtext">
+              {item.points} points by {item.author} {item.created_at} | hide | {item.num_comments} comments
+              </div>
+          </div>
+        </div>
         )}
-        </ul>
-      </div>
+      </Fragment>
     );
   }
 }
