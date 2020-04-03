@@ -10,10 +10,6 @@ export default [
         path: "/",
         component: News,
         exact: true
-      },
-      {
-        ...News,
-        path: "/users"
       }
     ]
   }

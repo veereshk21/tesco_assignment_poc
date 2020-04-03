@@ -107,9 +107,7 @@ exports.default = [_extends({}, _app2.default, {
     path: "/",
     component: _News2.default,
     exact: true
-  }, _extends({}, _News2.default, {
-    path: "/users"
-  })]
+  }]
 })];
 
 /***/ }),
