@@ -18,6 +18,10 @@
 body {
     font-family: "Verdana, Geneva, sans-serif";
 }
+ a.title:hover { 
+    text-decoration: none; 
+    color: #000;
+} 
 .title {
     font-family: "Verdana, Geneva, sans-serif";
     font-size: 10pt;
@@ -39,10 +43,4 @@ body {
 }
 .row {
     padding-top:5px;
-}
-.votearrow {
-    width: 10px;
-    height: 10px;
-    border: 0px;
-    margin: 3px 2px 6px;
 }

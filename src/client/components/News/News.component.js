@@ -1,20 +1,20 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
-import { fetchUsers } from "../../actions/index";
+import { fetchNews } from "../../actions/index";
 
-class Users extends React.Component {
+class News extends React.Component {
   componentDidMount() {
-    // this.props.fetchUsers();
+    // this.props.fetchNews();
   }
   render() {
-    const { users = [] } = this.props;
+    const { news = [] } = this.props;
     return (
       <Fragment>
-        {users.map((item,i) =>
+        {news.map((item,i) =>
         item.title &&<div className="row"> 
           <div className="col-auto serialNumber">
             {i+1}
-          </div>
+          </div>      
           <div className="col-auto">
               <a className="title" href={item.url}>{item.title} <span className="comhead">({item.author})</span> </a>
               <div className="subtext">
@@ -29,15 +29,15 @@ class Users extends React.Component {
 }
 
 function loadData(store) {
-  return store.dispatch(fetchUsers());
+  return store.dispatch(fetchNews());
 }
 
 const mapStateToProps = state => ({
-  users: state.users
+  news: state.news
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchUsers: () => dispatch(fetchUsers())
+  fetchNews: () => dispatch(fetchNews())
 });
 
 export default {
@@ -45,5 +45,5 @@ export default {
   component: connect(
     mapStateToProps,
     mapDispatchToProps
-  )(Users)
+  )(News)
 };

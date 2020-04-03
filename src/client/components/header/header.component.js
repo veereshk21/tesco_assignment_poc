@@ -16,11 +16,11 @@ class Header extends React.Component {
             <img src={Logo} alt="Hacker News"/>
           </a>
           <Link to="/">new</Link>|
-          <Link to="/users">past</Link>|
+          <Link to="/news">past</Link>|
           <Link to="/admins">comments</Link>|
           <Link to="/admins">ask</Link>|
           <Link to="/admins">show</Link>|
-          <Link to="/admins">jobs</Link>|c
+          <Link to="/admins">jobs</Link>|
           <Link to="/admins">submit</Link>
         </div>
     );
