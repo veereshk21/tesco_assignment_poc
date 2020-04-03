@@ -1,6 +1,8 @@
 import React from "react";
 import App from "./app.component";
-import News from "./components/home/News";
+import Home from "./components/home/home.component";
+import Users from "./components/users/users.component";
+import NotFound from "./components/notFound/notFound.component";
 
 export default [
   {
@@ -8,8 +10,15 @@ export default [
     routes: [
       {
         path: "/",
-        component: News,
+        component: Home,
         exact: true
+      },
+      {
+        ...Users,
+        path: "/users"
+      },
+      {
+          ...NotFound
       }
     ]
   }

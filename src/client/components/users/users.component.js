@@ -2,17 +2,17 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchUsers } from "../../actions/index";
 
-class News extends React.Component {
+class Users extends React.Component {
   componentDidMount() {
     // this.props.fetchUsers();
   }
   render() {
-    const { news = [] } = this.props;
+    const { users = [] } = this.props;
     return (
       <div>
-        <h4>News</h4>
+        <h4>Users</h4>
         <ul>
-          {news.map(item =>
+          {users.map(item =>
           <div key={item.objectID} className="table-row">
             <span >
               <a href={item.url}>{item.title}</a>
@@ -36,7 +36,7 @@ function loadData(store) {
 }
 
 const mapStateToProps = state => ({
-  news: state.users
+  users: state.users
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -48,5 +48,5 @@ export default {
   component: connect(
     mapStateToProps,
     mapDispatchToProps
-  )(News)
+  )(Users)
 };

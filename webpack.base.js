@@ -1,3 +1,4 @@
+
 module.exports = {
   module: {
     rules: [
@@ -19,7 +20,16 @@ module.exports = {
             ]
           ]
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+            {
+              loader: "css-loader",
+              options: { importLoaders: 1 }
+            }
+          ]
+      },
     ]
   }
 };

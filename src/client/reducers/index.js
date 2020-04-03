@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import newsReducers from './newsReducers';
+import authReducer from './authReducer';
+import userReducers from './userReducer';
 
 export default combineReducers({
-    news: newsReducers
+    users: userReducers,
+    authStatus: authReducer
 });
